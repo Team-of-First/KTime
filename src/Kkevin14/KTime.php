@@ -24,6 +24,9 @@ class KTime extends PluginBase implements Listener{
   public function onEnable(){
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
   }
+  public function onLoad(){
+         date_default_timezone_set('Asia/Seoul');
+    }
 
   public function sendUI (Player $player, $code, $data) {
     $packet = new ModalFormRequestPacket();
